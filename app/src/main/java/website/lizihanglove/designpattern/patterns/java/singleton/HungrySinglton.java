@@ -1,4 +1,4 @@
-package website.lizihanglove.designpattern.patterns.java.singlrton;
+package website.lizihanglove.designpattern.patterns.java.singleton;
 
 /**
  * @author lizihanglove
