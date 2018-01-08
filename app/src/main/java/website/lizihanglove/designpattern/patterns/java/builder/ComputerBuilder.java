@@ -8,7 +8,7 @@ package website.lizihanglove.designpattern.patterns.java.builder;
  */
 
 public class ComputerBuilder {
-    private String displayer;
+    private String display;
     private String mainUnit;
     private String mouse;
     private String keyboard;
@@ -16,12 +16,12 @@ public class ComputerBuilder {
     private ComputerBuilder() {
     }
 
-    public String getDisplayer() {
-        return displayer;
+    public String getDisplay() {
+        return display;
     }
 
-    public void setDisplayer(String displayer) {
-        this.displayer = displayer;
+    public void setDisplay(String display) {
+        this.display = display;
     }
 
     public String getMainUnit() {
@@ -51,7 +51,7 @@ public class ComputerBuilder {
     @Override
     public String toString() {
         return "ComputerBuilder{" +
-                "displayer='" + displayer + '\'' +
+                "display='" + display + '\'' +
                 ", mainUnit='" + mainUnit + '\'' +
                 ", mouse='" + mouse + '\'' +
                 ", keyboard='" + keyboard + '\'' +
@@ -61,8 +61,8 @@ public class ComputerBuilder {
     public static class Builder{
         private ComputerBuilder target =new ComputerBuilder();
 
-        public Builder installDisplayer(String displayer){
-            target.setDisplayer(displayer);
+        public Builder installDisplayer(String display){
+            target.setDisplay(display);
             return this;
         }
 
