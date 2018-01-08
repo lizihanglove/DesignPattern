@@ -4,7 +4,7 @@ package website.lizihanglove.designpattern.patterns.java.builder;
  * @author lizihanglove
  * @date 2018/1/8
  * @email one_mighty@163.com
- * @desc 构建者模式代码
+ * @desc 构建者模式
  */
 
 public class ComputerBuilder {
