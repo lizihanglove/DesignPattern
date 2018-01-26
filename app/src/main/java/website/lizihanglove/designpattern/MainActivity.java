@@ -12,6 +12,7 @@ import website.lizihanglove.designpattern.patterns.java.factory.pattern.Concrete
 import website.lizihanglove.designpattern.patterns.java.factory.pattern.ProductA;
 import website.lizihanglove.designpattern.patterns.java.factory.pattern.ProductB;
 import website.lizihanglove.designpattern.patterns.java.prototype.UrlPrototype;
+import website.lizihanglove.designpattern.patterns.kotlin.singleton.Singleton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,5 +66,11 @@ public class MainActivity extends AppCompatActivity {
         abstractProductA2.method();
         abstractProductB2.method();
 
+        Singleton instance1 = Singleton.INSTANCE;
+        Singleton instance2 = Singleton.INSTANCE;
+        Singleton instance3 = Singleton.INSTANCE;
+        instance1.print();
+        instance2.print();
+        instance3.print();
     }
 }
