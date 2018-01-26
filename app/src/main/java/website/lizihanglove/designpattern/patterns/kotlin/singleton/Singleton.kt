@@ -9,6 +9,6 @@ package website.lizihanglove.designpattern.patterns.kotlin.singleton
  */
 object Singleton {
     fun print(){
-        println("Singleton ${this.javaClass.hashCode()}");
+        println("Singleton ${this.javaClass.hashCode()}")
     }
 }
