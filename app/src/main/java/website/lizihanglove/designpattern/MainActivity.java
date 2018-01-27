@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         abstractProductA2.method();
         abstractProductB2.method();
 
+        //Kotlin单例
         Singleton instance1 = Singleton.INSTANCE;
         Singleton instance2 = Singleton.INSTANCE;
         Singleton instance3 = Singleton.INSTANCE;
