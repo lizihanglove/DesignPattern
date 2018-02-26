@@ -12,6 +12,9 @@ import website.lizihanglove.designpattern.patterns.java.factory.pattern.Concrete
 import website.lizihanglove.designpattern.patterns.java.factory.pattern.ProductA;
 import website.lizihanglove.designpattern.patterns.java.factory.pattern.ProductB;
 import website.lizihanglove.designpattern.patterns.java.prototype.UrlPrototype;
+import website.lizihanglove.designpattern.patterns.java.proxy.DealerInterface;
+import website.lizihanglove.designpattern.patterns.java.proxy.RealDelegate;
+import website.lizihanglove.designpattern.patterns.java.proxy.TicketProxy;
 import website.lizihanglove.designpattern.patterns.kotlin.singleton.Singleton;
 
 public class MainActivity extends AppCompatActivity {
@@ -65,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
         AbstractProductB abstractProductB2 = concreteFactoryB.createProductB();
         abstractProductA2.method();
         abstractProductB2.method();
+
+        //代理模式
+        DealerInterface dealerInterface = new RealDelegate();
+        TicketProxy proxy = new TicketProxy(dealerInterface);
+        proxy.searchTicket();
+        proxy.bookTicket();
+        proxy.payTicket();
 
         //Kotlin单例
         Singleton instance1 = Singleton.INSTANCE;
