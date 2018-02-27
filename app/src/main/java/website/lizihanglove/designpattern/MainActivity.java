@@ -15,6 +15,10 @@ import website.lizihanglove.designpattern.patterns.java.prototype.UrlPrototype;
 import website.lizihanglove.designpattern.patterns.java.proxy.DealerInterface;
 import website.lizihanglove.designpattern.patterns.java.proxy.RealDelegate;
 import website.lizihanglove.designpattern.patterns.java.proxy.TicketProxy;
+import website.lizihanglove.designpattern.patterns.java.strategy.AlipayStrategy;
+import website.lizihanglove.designpattern.patterns.java.strategy.Customer;
+import website.lizihanglove.designpattern.patterns.java.strategy.UnionPayStrategy;
+import website.lizihanglove.designpattern.patterns.java.strategy.WeChatStrategy;
 import website.lizihanglove.designpattern.patterns.kotlin.singleton.Singleton;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,6 +79,24 @@ public class MainActivity extends AppCompatActivity {
         proxy.searchTicket();
         proxy.bookTicket();
         proxy.payTicket();
+
+        //策略模式
+        Customer customer = new Customer();
+
+        //微信支付策略
+        WeChatStrategy weChatStrategy = new WeChatStrategy();
+        customer.selectPaymentMode(weChatStrategy);
+        customer.pay();
+
+        //支付宝支付策略
+        AlipayStrategy alipayStrategy = new AlipayStrategy();
+        customer.selectPaymentMode(alipayStrategy);
+        customer.pay();
+
+        //银联支付策略
+        UnionPayStrategy unionPayStrategy = new UnionPayStrategy();
+        customer.selectPaymentMode(unionPayStrategy);
+        customer.pay();
 
         //Kotlin单例
         Singleton instance1 = Singleton.INSTANCE;
