@@ -15,6 +15,7 @@ import website.lizihanglove.designpattern.patterns.java.prototype.UrlPrototype;
 import website.lizihanglove.designpattern.patterns.java.proxy.DealerInterface;
 import website.lizihanglove.designpattern.patterns.java.proxy.RealDelegate;
 import website.lizihanglove.designpattern.patterns.java.proxy.TicketProxy;
+import website.lizihanglove.designpattern.patterns.java.state.Controller;
 import website.lizihanglove.designpattern.patterns.java.strategy.AlipayStrategy;
 import website.lizihanglove.designpattern.patterns.java.strategy.Customer;
 import website.lizihanglove.designpattern.patterns.java.strategy.UnionPayStrategy;
@@ -97,6 +98,14 @@ public class MainActivity extends AppCompatActivity {
         UnionPayStrategy unionPayStrategy = new UnionPayStrategy();
         customer.selectPaymentMode(unionPayStrategy);
         customer.pay();
+
+        //状态模式
+        Controller controller = new Controller();
+        controller.handle();
+        controller.turnState();
+        controller.handle();
+        controller.turnState();
+        controller.handle();
 
         //Kotlin单例
         Singleton instance1 = Singleton.INSTANCE;
