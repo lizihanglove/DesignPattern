@@ -1,8 +1,8 @@
-package website.lizihanglove.designpattern;
+package website.lizihanglove.designpattern.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import website.lizihanglove.designpattern.R;
 import website.lizihanglove.designpattern.patterns.java.builder.ComputerBuilder;
 import website.lizihanglove.designpattern.patterns.java.factory.abstracts.AbstractProductA;
 import website.lizihanglove.designpattern.patterns.java.factory.abstracts.AbstractProductB;
@@ -22,7 +22,13 @@ import website.lizihanglove.designpattern.patterns.java.strategy.UnionPayStrateg
 import website.lizihanglove.designpattern.patterns.java.strategy.WeChatStrategy;
 import website.lizihanglove.designpattern.patterns.kotlin.singleton.Singleton;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * @author lizihanglove
+ * @date 2018/3/28
+ * @email one_mighty@163.com
+ * @desc
+ */
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

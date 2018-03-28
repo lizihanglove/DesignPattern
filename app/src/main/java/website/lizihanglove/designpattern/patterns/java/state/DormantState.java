@@ -4,7 +4,7 @@ package website.lizihanglove.designpattern.patterns.java.state;
  * @author lizihanglove
  * @date 2018/3/5
  * @email one_mighty@163.com
- * @描述 休眠模式
+ * @desc 休眠模式
  */
 
 public class DormantState implements State {

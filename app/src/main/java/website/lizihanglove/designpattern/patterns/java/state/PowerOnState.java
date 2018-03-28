@@ -4,7 +4,7 @@ package website.lizihanglove.designpattern.patterns.java.state;
  * @author lizihanglove
  * @date 2018/3/5
  * @email one_mighty@163.com
- * @描述 开启状态
+ * @desc 开启状态
  */
 
 public class PowerOnState implements State {

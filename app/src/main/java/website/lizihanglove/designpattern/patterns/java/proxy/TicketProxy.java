@@ -4,7 +4,7 @@ package website.lizihanglove.designpattern.patterns.java.proxy;
  * @author lizihanglove
  * @date 2018/2/26
  * @email one_mighty@163.com
- * @描述 代理模式-代理类
+ * @desc 代理模式-代理类
  */
 
 public class TicketProxy implements DealerInterface {
